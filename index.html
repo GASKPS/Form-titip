@@ -39,9 +39,9 @@ body.dark{
   --badge-secondary: #6b7280;
 }
 body { background: var(--bg); color: var(--text); min-height:100vh; padding:40px 15px; display:flex; justify-content:center; align-items:flex-start; font-family:"Segoe UI",sans-serif; }
-.card { max-width:950px; width:100%; background:var(--card); border-radius:16px; padding:25px; box-shadow:0 10px 30px rgba(0,0,0,.15); position:relative; transition:background 0.3s; }
+.card { max-width:950px; width:100%; background:var(--card); border-radius:16px; padding:25px; box-shadow:0 10px 30px rgba(0,0,0,.15); position:relative; transition:background 0.3s; text-align:center; }
 h2 { text-align:center; color:var(--primary); margin-bottom:4px; }
-.subtitle { text-align:center; font-size:14px; color:var(--text-muted); }
+.subtitle { text-align:center; font-size:14px; color:var(--text-muted); margin-bottom:15px; }
 .dark-toggle { text-align:right; margin-bottom:10px; }
 .form-control, .btn { height:45px; border-radius:10px; transition: all 0.2s ease; }
 body.dark .form-control::placeholder { color: var(--text-muted); opacity:1; }
@@ -49,7 +49,7 @@ body.dark .form-control::placeholder { color: var(--text-muted); opacity:1; }
 .eclipse .sun { position:absolute; inset:0; border-radius:50%; background:#facc15; box-shadow:0 0 6px rgba(250,204,21,.8); transition:transform 0.4s ease; }
 .eclipse .moon { position:absolute; inset:0; border-radius:50%; background:#0f172a; transform:translateX(-26px); transition:transform 0.4s ease; }
 body.dark .eclipse .moon { transform:translateX(0); box-shadow:0 0 6px #22d3ee, 0 0 14px rgba(34,211,238,.8); }
-.table-container{ max-height:380px; overflow:auto; border-radius:10px; background:var(--card); box-shadow:0 4px 12px rgba(0,0,0,.1); }
+.table-container{ max-height:380px; overflow:auto; border-radius:10px; background:var(--card); box-shadow:0 4px 12px rgba(0,0,0,.1); margin-bottom:10px; }
 table { width:100%; border-collapse:collapse; color:var(--text); }
 th { position:sticky; top:0; background:var(--primary); color:#fff; }
 th, td { border:1px solid var(--border); padding:8px; font-size:14px; transition:all 0.2s ease; }
@@ -60,6 +60,7 @@ body.dark tbody tr:nth-child(even) { background: rgba(255,255,255,0.05); }
 .badge.bg-secondary { background-color: var(--badge-secondary); }
 #screenshot-header { display:none; text-align:center; margin-bottom:10px; }
 #screenshot-header img { height:190px; margin-bottom:6px; }
+#logo-web { height:190px; margin-bottom:10px; }
 .btn-primary { background:linear-gradient(135deg,#4dabf7,#1e40af); border:none; }
 .btn-outline-primary { transition:all 0.3s; }
 .btn-outline-primary:hover { background: var(--primary); color:#fff; border-color: var(--primary); }
@@ -77,13 +78,16 @@ td i { margin-right:4px; }
     </button>
   </div>
 
+  <!-- Logo perusahaan di web -->
+  <img id="logo-web" src="logo-perusahaan.png" alt="Logo Perusahaan">
+
   <h2>Mess Karyawan</h2>
   <div class="subtitle">Sistem Informasi Penghuni Mess</div>
   <hr>
 
   <div id="last-update">Update database terakhir: 4 Maret 2026 17:55 WIT</div>
 
-  <!-- Logo Perusahaan untuk screenshot -->
+  <!-- Logo untuk screenshot tetap sama -->
   <div id="screenshot-header">
     <img src="logo-perusahaan.png" alt="Logo Perusahaan">
     <h5 class="fw-semibold mb-0">Data Mess Karyawan</h5>
